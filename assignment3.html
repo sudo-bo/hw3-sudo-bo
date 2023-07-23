@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
+            crossorigin="anonymous">
+        <link rel="stylesheet" href="assignment3.css" />
+        <title>Calculator</title>
+    </head>
+    <body>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+                integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+                crossorigin="anonymous">
+        </script>
+
+        <div id="main" class="container">
+            <div class="row bottom-buffer">
+                <div id="input" class="col-12 text-end border">0</div>
+            </div>
+            <div class="row button-row g-1 justify-content-center">
+                <div class="col-2"><button class="button btn btn-light">Deg</button></div>
+                <div class="col-2"><button class="button btn btn-light" onclick="onSingleOperationClick(this)">x!</button></div>
+                <div class="col-2"><button class="button btn btn-light">(</button></div>
+                <div class="col-2"><button class="button btn btn-light">)</button></div>
+                <div class="col-2"><button class="button btn btn-light" onclick="onSingleOperationClick(this)">%</button></div>
+                <div class="col-2"><button class="button btn btn-light" onclick="reset()">AC</button></div>
+            </div>
+            <div class="row button-row g-1 justify-content-center">
+                <div class="col-2"><button class="button btn btn-light" onclick="onSingleOperationClick(this)">sin</button></div>
+                <div class="col-2"><button class="button btn btn-light" onclick="onSingleOperationClick(this)">ln</button></div>
+                <div class="col-2"><button class="button btn btn-light grey" onclick="onNumberClick(this)">7</button></div>
+                <div class="col-2"><button class="button btn btn-light grey" onclick="onNumberClick(this)">8</button></div>
+                <div class="col-2"><button class="button btn btn-light grey" onclick="onNumberClick(this)">9</button></div>
+                <div class="col-2"><button class="button btn btn-light" onclick="onDoubleOperationClick(this)">&#x00F7</button></div>
+            </div>
+            <div class="row button-row g-1 justify-content-center">
+                <div class="col-2"><button class="button btn btn-light" onclick="onSingleOperationClick(this)">cos</button></div>
+                <div class="col-2"><button class="button btn btn-light" onclick="onSingleOperationClick(this)">log</button></div>
+                <div class="col-2"><button class="button btn btn-light grey" onclick="onNumberClick(this)">4</button></div>
+                <div class="col-2"><button class="button btn btn-light grey" onclick="onNumberClick(this)">5</button></div>
+                <div class="col-2"><button class="button btn btn-light grey" onclick="onNumberClick(this)">6</button></div>
+                <div class="col-2"><button class="button btn btn-light" onclick="onDoubleOperationClick(this)">&#215</button></div>
+            </div>
+            <div class="row button-row g-1 justify-content-center">
+                <div class="col-2"><button class="button btn btn-light" onclick="onSingleOperationClick(this)">tan</button></div>
+                <div class="col-2"><button class="button btn btn-light" onclick="onSingleOperationClick(this)">&#x221A</button></div>
+                <div class="col-2"><button class="button btn btn-light grey" onclick="onNumberClick(this)">1</button></div>
+                <div class="col-2"><button class="button btn btn-light grey" onclick="onNumberClick(this)">2</button></div>
+                <div class="col-2"><button class="button btn btn-light grey" onclick="onNumberClick(this)">3</button></div>
+                <div class="col-2"><button class="button btn btn-light" onclick="onDoubleOperationClick(this)">-</button></div>
+            </div>
+            <div class="row button-row g-1 justify-content-center">
+                <div class="col-2"><button class="button btn btn-light" onclick="onSingleOperationClick(this)">EXP</button></div>
+                <div class="col-2"><button class="button btn btn-light" onclick="onDoubleOperationClick(this)">X<span class="sup">y</span></button></div>
+                <div class="col-2"><button class="button btn btn-light grey" onclick="onNumberClick(this)">0</button></div>
+                <div class="col-2"><button class="button btn btn-light grey" onclick="onNumberClick(this)">.</button></div>
+                <div class="col-2"><button class="button btn btn-light" onclick="calculate()">=</button></div>
+                <div class="col-2"><button class="button btn btn-light" onclick="onDoubleOperationClick(this)">+</button></div>
+            </div>
+        </div>
+    </body>
+
+    <script src="assignment3.js"></script>
+</html>
